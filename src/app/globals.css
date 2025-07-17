@@ -1,26 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
+body {
+  font-family: "Poppins", sans-serif, "Courier New", Courier, monospace;
+}
+
 :root {
+  --radius: 0.625rem;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1b5e20;
+  --card: #ffffff;
+  --card-foreground: #1b5e20;
+  --popover: #ffffff;
+  --popover-foreground: #1b5e20;
+  --primary: #4caf50;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f5e9;
+  --secondary-foreground: #1b5e20;
+  --muted: #e8f5e9;
+  --muted-foreground: #66bb6a;
+  --accent: #c8e6c9;
+  --accent-foreground: #1b5e20;
+  --destructive: #ef4444;
+  --border: #e8f5e9;
+  --input: #e8f5e9;
+  --ring: #81c784;
+  --chart-1: #4caf50;
+  --chart-2: #81c784;
+  --chart-3: #a5d6a7;
+  --chart-4: #c8e6c9;
+  --chart-5: #e8f5e9;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1b5e20;
+  --sidebar-primary: #4caf50;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8f5e9;
+  --sidebar-accent-foreground: #1b5e20;
+  --sidebar-border: #e8f5e9;
+  --sidebar-ring: #81c784;
+  --ecogrow-dark: #1b5e20;
+  --ecogrow-primary: #4caf50;
+  --ecogrow-light: #a5d6a7;
+  --ecogrow-lightest: #e8f5e9;
+}
+
+.dark {
+  --background: #1b5e20;
+  --foreground: #ffffff;
+  --card: #2e7d32;
+  --card-foreground: #ffffff;
+  --popover: #2e7d32;
+  --popover-foreground: #ffffff;
+  --primary: #81c784;
+  --primary-foreground: #1b5e20;
+  --secondary: #388e3c;
+  --secondary-foreground: #ffffff;
+  --muted: #388e3c;
+  --muted-foreground: #a5d6a7;
+  --accent: #388e3c;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #66bb6a;
+  --chart-1: #81c784;
+  --chart-2: #a5d6a7;
+  --chart-3: #c8e6c9;
+  --chart-4: #4caf50;
+  --chart-5: #e8f5e9;
+  --sidebar: #2e7d32;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #81c784;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #388e3c;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #66bb6a;
+  --ecogrow-dark: #1b5e20;
+  --ecogrow-primary: #4caf50;
+  --ecogrow-light: #a5d6a7;
+  --ecogrow-lightest: #e8f5e9;
 }
 
 @theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-ecogrow-dark: var(--ecogrow-dark);
+  --color-ecogrow-primary: var(--ecogrow-primary);
+  --color-ecogrow-light: var(--ecogrow-light);
+  --color-ecogrow-lightest: var(--ecogrow-lightest);
+  --font-sans: "Poppins", sans-serif, "Courier New", Courier;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }
