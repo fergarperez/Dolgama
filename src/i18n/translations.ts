@@ -29,9 +29,32 @@ export const translations = {
     },
   },
   footer: {
+    description: {
+      es: "Nutrimos el futuro verde con soluciones agrícolas sostenibles e innovadoras.",
+      en: "We nourish a green future with sustainable and innovative agricultural solutions.",
+    },
+    products: {
+      es: "Productos",
+      en: "Products",
+    },
+    blog: {
+      es: "Blog",
+      en: "Blog",
+    },
     contact: {
-      es: "Contáctanos",
-      en: "Contact us",
+      es: "Contacto",
+      en: "Contact",
+    },
+    rights: {
+      es:
+        "© " +
+        new Date().getFullYear() +
+        "Dolgama. Todos los derechos reservados.",
+      en: "© " + new Date().getFullYear() + " Dolgama. All rights reserved.",
+    },
+    terms: {
+      es: "Términos y condiciones",
+      en: "Terms and Conditions",
     },
   },
 };

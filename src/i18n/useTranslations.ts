@@ -1,4 +1,5 @@
 // src/i18n/useTranslation.ts
+"use client";
 
 import { translations } from "./translations";
 import { useLanguage } from "./useLanguage";
