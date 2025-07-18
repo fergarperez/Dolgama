@@ -1,12 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { getLanguage, setLanguage } from "@/i18n/config";
+import { useLanguage } from "@/i18n/useLanguage";
 
 export function ModeToggle() {
+  const { getLanguage, setLanguage } = useLanguage();
+
   function toggleLanguage(lang: "es" | "en") {
     setLanguage(lang);
     window.location.reload();

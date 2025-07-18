@@ -4,7 +4,6 @@ import { Amphora } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslations";
 import React from "react";
 import { Button } from "../ui/button";
-import { setLanguage } from "@/i18n/config";
 import { ModeToggle } from "./ToggleLanguage";
 
 function Header() {
