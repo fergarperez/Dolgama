@@ -3,8 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { useTranslation } from "@/i18n/useTranslations";
 
 function Hero() {
+  const { t } = useTranslation("hero");
+
   return (
     <section
       id="inicio"
@@ -40,7 +43,7 @@ function Hero() {
             height={80}
             className="mx-auto mb-4 rounded-2xl"
           />
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">EcoGrow</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">Dolgama</h1>
         </motion.div>
 
         <motion.p
@@ -49,7 +52,7 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          Nutrimos el futuro verde.
+          {t("title")}
         </motion.p>
 
         <motion.div
@@ -61,7 +64,7 @@ function Hero() {
             size="lg"
             className="bg-ecogrow-primary hover:bg-ecogrow-primary/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
-            Conoce nuestros productos
+            {t("cta")}
           </Button>
         </motion.div>
       </motion.div>

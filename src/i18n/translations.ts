@@ -10,6 +10,24 @@ export const translations = {
       en: "Discover our products",
     },
   },
+  header: {
+    home: {
+      es: "Inicio",
+      en: "Home",
+    },
+    about: {
+      es: "Nosotros",
+      en: "About Us",
+    },
+    products: {
+      es: "Productos",
+      en: "Products",
+    },
+    contact: {
+      es: "Contacto",
+      en: "Contact",
+    },
+  },
   footer: {
     contact: {
       es: "Contáctanos",
