@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export type Language = "es" | "en";
 
-const isValidLanguage = (lang: any): lang is Language =>
+const isValidLanguage = (lang: string | null): lang is Language =>
   lang === "es" || lang === "en";
 
 export const useLanguage = () => {
