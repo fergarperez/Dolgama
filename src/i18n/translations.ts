@@ -49,7 +49,7 @@ export const translations = {
       es:
         "© " +
         new Date().getFullYear() +
-        "Dolgama. Todos los derechos reservados.",
+        " Dolgama. Todos los derechos reservados.",
       en: "© " + new Date().getFullYear() + " Dolgama. All rights reserved.",
     },
     terms: {
