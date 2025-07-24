@@ -57,4 +57,38 @@ export const translations = {
       en: "Terms and Conditions",
     },
   },
+  aboutUs: {
+    title: {
+      es: "Sobre Nosotros",
+      en: "About Us",
+    },
+    description: {
+      es: "En EcoGrow, nos dedicamos a revolucionar la agricultura con soluciones sostenibles y efectivas. Nuestros productos bioorgánicos nutren la tierra mientras protegen el medio ambiente, garantizando cosechas abundantes para las futuras generaciones.",
+      en: "At EcoGrow, we are dedicated to revolutionizing agriculture with sustainable and effective solutions. Our bio-organic products nourish the soil while protecting the environment, ensuring abundant harvests for future generations.",
+    },
+    biofertilizationTitle: {
+      es: "Biofertilización",
+      en: "Biofertilization",
+    },
+    biofertilizationDescription: {
+      es: "Nutrición natural y efectiva",
+      en: "Natural and effective nutrition",
+    },
+    ecoFriendlyTitle: {
+      es: "Eco-Friendly",
+      en: "Eco-Friendly",
+    },
+    ecoFriendlyDescription: {
+      es: "Respeto por el medio ambiente",
+      en: "Respect for the environment",
+    },
+    lastingTitle: {
+      es: "Efecto Duradero",
+      en: "Lasting Effect",
+    },
+    lastingDescription: {
+      es: "Resultados sostenibles en el tiempo",
+      en: "Sustainable results over time",
+    },
+  },
 };
