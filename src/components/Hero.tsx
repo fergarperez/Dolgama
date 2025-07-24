@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { useTranslation } from "@/i18n/useTranslations";
+import heroImage from "@/assets/images/hero.jpg";
 
 function Hero() {
   const { t } = useTranslation("hero");
@@ -11,11 +12,11 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative h-screen flex items-center justify-center overflow-hidden w-full"
+      className="relative h-[100vh] flex items-center justify-center overflow-hidden w-full"
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src={heroImage || "/placeholder.svg"}
           alt="Lush farmland with green crops"
           fill
           className="object-cover"
@@ -36,14 +37,7 @@ function Hero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          <Image
-            src="/placeholder.svg?height=80&width=80"
-            alt="EcoGrow Logo"
-            width={80}
-            height={80}
-            className="mx-auto mb-4 rounded-2xl"
-          />
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">Dolgama</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">Magarsa</h1>
         </motion.div>
 
         <motion.p
@@ -62,7 +56,7 @@ function Hero() {
         >
           <Button
             size="lg"
-            className="bg-ecogrow-primary hover:bg-ecogrow-primary/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="cursor-pointer bg-ecogrow-primary hover:bg-ecogrow-primary/90 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             {t("cta")}
           </Button>
