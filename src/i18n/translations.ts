@@ -91,4 +91,28 @@ export const translations = {
       en: "Sustainable results over time",
     },
   },
+  products: {
+    title: {
+      es: "Nuestros Productos",
+      en: "Our Products",
+    },
+    description: {
+      es: "Descubre nuestra línea completa de productos bioorgánicos diseñados para maximizar el potencial de tus cultivos.",
+      en: "Discover our complete line of bio-organic products designed to maximize the potential of your crops.",
+    },
+    categories: {
+      organicFertilizers: {
+        es: "Fertilizantes Orgánicos",
+        en: "Organic Fertilizers",
+      },
+      biostimulants: {
+        es: "Bioestimulantes",
+        en: "Biostimulants",
+      },
+      mycorrhizae: {
+        es: "Micorrizas",
+        en: "Mycorrhizae",
+      },
+    },
+  },
 };

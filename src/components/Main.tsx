@@ -2,7 +2,10 @@ import React from "react";
 import Hero from "./Hero";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import AboutUs from "./ui/AboutUs";
+import AboutUs from "./AboutUs";
+import Products from "./Products";
+import WhyUs from "./WhyUs";
+import Contact from "./Contact";
 
 function Main() {
   return (
@@ -10,6 +13,9 @@ function Main() {
       <Header />
       <Hero />
       <AboutUs />
+      <Products />
+      <WhyUs />
+      <Contact />
       <Footer />
     </main>
   );
